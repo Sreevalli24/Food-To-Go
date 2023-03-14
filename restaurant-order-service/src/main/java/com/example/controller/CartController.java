@@ -49,7 +49,7 @@ public class CartController {
 		return new ResponseEntity<Cart>(cart, HttpStatus.OK);
 	}
 	
-	@RequestMapping(value = "/delete/{itemId}", method = RequestMethod.GET)
+	@RequestMapping(value = "/delete/{itemId}", method = RequestMethod.DELETE)
 	public ResponseEntity<?> deleteCartItem(@PathVariable Integer itemId) throws CartException{
 		
 		Cart cart = cartDAOimpl.deleteCartItem(itemId);

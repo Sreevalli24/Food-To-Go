@@ -66,7 +66,7 @@ public class ItemsController {
 		return ResponseEntity.status(HttpStatus.OK).body(items);
 	}
 	
-	@RequestMapping(value = "/remove/{itemId}", method = RequestMethod.GET)
+	@RequestMapping(value = "/remove/{itemId}", method = RequestMethod.DELETE)
 	public ResponseEntity<?> deleteItem(@PathVariable Integer itemId) throws ItemsException{
 		
 		Items item = itemsDAOimpl.deleteItem(itemId);
